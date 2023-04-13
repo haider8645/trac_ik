@@ -1,8 +1,6 @@
 This package provides is a MoveIt! kinematics plugin that replaces the KDL IK
 solver with the TRAC-IK solver.  Currently mimic joints are *not* supported.  
 
-###As of v1.4.3, this package is part of the ROS Indigo/Jade binaries: `sudo apt-get install ros-jade-trac-ik-kinematics-plugin`
-
 Dependencies:
 
 - Go to https://nlopt.readthedocs.io/en/latest/ and download the latest version for nlopt. (Alternative: apt-get install libnlopt-dev)

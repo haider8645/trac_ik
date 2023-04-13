@@ -135,7 +135,7 @@ namespace trac_ik_kinematics_plugin
       joint_min_(i) = solver_info_.limits[i].min_position;
       joint_max_(i) = solver_info_.limits[i].max_position;
     }
- 
+
     num_joints_ = kdl_chain_.getNrOfJoints();
 
     RCLCPP_INFO(LOGGER, "number of joints: %i", num_joints_);
@@ -384,7 +384,7 @@ namespace trac_ik_kinematics_plugin
         solution[z] = out(z);
 
       // check for collisions if a callback is provided
-      if (!solution_callback.empty())
+      if (solution_callback)
       {
         solution_callback(ik_pose, solution, error_code);
         if (error_code.val == moveit_msgs::msg::MoveItErrorCodes::SUCCESS)
